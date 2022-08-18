@@ -1,0 +1,24 @@
+let btnDesencriptar = document.querySelector( '.btn-desencriptar' );
+
+btnDesencriptar.addEventListener( 'click', function(event) {
+
+	event.preventDefault();
+
+	filtrarTexto();
+   
+
+	if ( texto == '' ) {
+		
+		pizarraEvento('mostrarAlerta');
+
+	} else {
+
+		texto = texto.replace( /ai/g, 'a').replace( /enter/g, 'e').replace( /imes/g, 'i').replace( /ober/g, 'o').replace( /ufat/g, 'u');
+
+		pizarraEvento('borrarContenido');
+		pizarraEvento('cambiarTexto');
+		pizarraEvento('mostrarBoton');
+
+	}
+
+} );
